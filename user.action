@@ -138,6 +138,7 @@ stupid-server.example.com/
 # as set in default.action anyway:
 #
 { +block{Nasty ads.} }
+.5622.cn
 cp.dipan.com
 .*/hiido\.js
 .*.alimama.cn
@@ -308,3 +309,10 @@ i.mtime.cn
 ./.*xml/*
 www.google.com/tbproxy*
 l.yimg.com
+{+filter{Script} \
+}
+redcrane186.blogspot.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
+{+hide-referrer{block} \
+}
+fap.to/.*\.jpg
+.turboimagehost.com/.*\.jpg

@@ -92,8 +92,9 @@ FILTER: Script wipe script tag
 #ignore some function
 s/<\s?script[^>]*?>(?![\s\S]{10,100}repjpg)[\s\S]*?<\s?\/script\s?>//ig
 s/<\s?a[^<]*?javascript[^>]*?>[\s\S]*?<\s?\/a\s?>//ig
+s@<\s?script[^>]*(?:)[^>]*?>[\s\S]*?<\s?\/script\s?>@@ig
 
-s/<\s?td width="400"[^>]*?>[\s\S]*?<\s?\/td\s?>//ig
+#s/<\s?td width="400"[^>]*?>[\s\S]*?<\s?\/td\s?>//ig
 
 
 #s/<\s?a[^>]*?target="_blank[^>]*?>[\s\S]*?<\s?\/a\s?>//ig
@@ -122,7 +123,7 @@ s/<\s?span[^>]*(?:span_ad_)[^(?:"|')]*(?:"|')[^>]*?>[\s\S]*?<\s?\/span\s?>//ig
 # div ID or Class
 s/<\s?div[^>]*(?:ad_th\
 |728x90\
-|ad\d+\
+#|ad\d+\
 |ad_large\
 |ad-block\
 |ad_banner\
@@ -178,7 +179,7 @@ FILTER: googleReaderAd useless herf heyperlink with img
 
 s/<\s?a[^>]*?>\n?<img[^>]*?(?:feedburner\.com\
 |feedads\.googleadservices\.com\
-#|lh\d\.ggpht\.com\
+|lh\d\.ggpht\.com\
 |feedsky\.com)[^>]*?>\n?<\s?\/a\s?>//ig
 
 s@<\s?table[^>]*?>[\s\S]*?(?:brightcove\.com\
@@ -202,6 +203,7 @@ s@<\s?a[^>]*(?:adpage\
 |advertising\
 |adfrom\
 |anuosha\
+|baberepublic\.com\
 |aiminke\
 |banner\
 |bdnk\
@@ -226,6 +228,7 @@ s@<\s?a[^>]*(?:adpage\
 |thinkbux\
 |urlcash\
 |xdns\
+|zxxo\.net\
 |adultfriendfinder)[^>]*?>[\s\S]*?<\s?\/a\s?>@@ig
 
 FILTER: hyperLink_filterChina useless herf heyperlink China & japan Version
@@ -233,6 +236,7 @@ FILTER: hyperLink_filterChina useless herf heyperlink China & japan Version
 s@<\s?a[^>]*(?:51vk\.com\
 |789hi\.com\
 |asiafind1\.com\
+|adultfriendfinder\.com\
 |go2av.*\.php\
 |angel-live\.com\
 |baidu\.com\/cpro\
@@ -247,6 +251,7 @@ s@<\s?a[^>]*(?:51vk\.com\
 |etology\.com\
 |funshion\.com\
 |goto\.sogou\
+|getiton\.com\
 |guanxi\
 |hb666\.net\
 |hi99\.net\
@@ -324,6 +329,8 @@ s/<\s?a[^>]*?>\n?<img\s?(:?height="60"\s?width="760"\
 
 # s|<iframe (src=(?:(['"])[^>\\\\2]*\2\|[^'">\\\s]+?))([^>]*)\s+width\s*=\s*(["']?)(\d+?)\4|<iframe $1 width=$4$5$4$3|siUg
 
+FILTER: noScript blacklisted script at particular webpage
+s@<\s?script[^>]*(?:)[^>]*?>[\s\S]*?<\s?\/script\s?>@@ig
 FILTER: IframeWithWidth_filter useless herf heyperlink with img
 
 s@<\s?iframe[^>]*?width=(?:"|')?(?:160|305|326|515|728|650|710|760|468|300|780|590)(?:"|')?[^>]*?\s?>\n*?<\s?\/iframe\s?>@@ig
@@ -347,6 +354,7 @@ s@<\s?(?:script|iframe)[^>]*(?:60_\d?\.js\
 |ad(?!\.js)\d?\.js\
 |advertisement\
 |all4ad\
+|baberepublic\.com\
 |banners?\
 |book2\.js\
 |\d{3}x\d{2}\.js\
@@ -373,6 +381,7 @@ s@<\s?(?:script|iframe)[^>]*(?:60_\d?\.js\
 |www\.idc-\w\.com\
 |webgame\.js\
 |ystat\
+|zxxo\.net\
 |adult)[^>]*?>[\s\S]*?<\s?\/(?:script|iframe)\s?>@@ig
 
 FILTER: ScriptNiframeChina_filter useless herf heyperlink with script
@@ -381,8 +390,11 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |1133\.cc\
 |520204\.com\
 |118114\.cn\
+|\d+\.com\
+|\d+\.cn\
 |200x130\.js\
 |53kf\.com\
+|37cs\.com\
 |5k3g\.com\
 |17luntan\
 |56wan\
@@ -390,6 +402,7 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |779\.net\
 |5013link\
 |\/\/ad.\
+|adultfriendfinder\.com\
 |AD.js\
 |ADData\
 |assocLinkApp\
@@ -399,10 +412,12 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |adpolestar\
 |av17hi\
 |baidu.*\.js\
+|btnibbler\.com\
 |bn\-13\
 |comic-b\d\
 |cbox\.ws\
 |cpro\.baidu\.com\
+|dhtmlwindow\.js\
 |firstpost\.js\
 |floatadv\.js\
 |fenlm\.cn\
@@ -410,6 +425,7 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |ggg\
 |guga\d{2}_list\
 |guga\d{2}_\
+|getiton\.com\
 |houseads\.js\
 |haodm/dmjsc\
 |hiido\
@@ -417,22 +433,24 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |imp3\.net\
 |jieku\.com\
 |joyistar\.com\
+|jiathis\.com\
 |list_\d+\.js\
 |mid\d\.js\
+|mpdaogou\
 |nuffnang\
 |newhuagg\
 |orsoon\/.*\.js\
 |overture\
 |pee\.cn\
 |piao\
-|p4\.js\
-|p\d\.js\
+|p(\d+)?\.js\
 |popWinScript\.js\
 |top\.js\
 |rightbartest\.js\
 |statics(?!\.verycd)\
 |sponsor(?!\.verycd)\
 |sponsor\.verycd\
+|sfilm\.com\
 |twpoker\.\
 |tj\.js\
 |unstat\.baidu\
