@@ -193,7 +193,6 @@ www.example.com/nasty-ads/sponsor.gif
 #/
 {+filter{Event} \
  +filter{Script} \
- +kill-popups \
 }
 .0ex.net*/(?!.*(css|js|gif|jpe?g|png|ico)$)
 .katube.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
@@ -250,7 +249,6 @@ xvideo.cc*/(?!.*(css|js|gif|jpe?g|png|ico)$)
  +filter{Event} \
  +filter{Script} \
  +filter{gogo2sex} \
- +kill-popups \
 }
 gogo2sex.com
 {+filter{Event} \
