@@ -134,7 +134,6 @@ s/<\s?div[^>]*(?:ad_th\
 |AdBlock\
 |adbottom\
 |ad_column\
-|adv(\d?|_)\
 |\"ad\"\
 |advertising\
 |ad_filter\
@@ -147,6 +146,7 @@ s/<\s?div[^>]*(?:ad_th\
 |digaction\
 |digbox\
 |HTML10\
+|ad_300x600\
 |headerbanner\
 |iFloat(Left|Right)\
 |midbanner\
@@ -231,7 +231,7 @@ s@<\s?a[^>]*(?:adpage\
 |zxxo\.net\
 |adultfriendfinder)[^>]*?>[\s\S]*?<\s?\/a\s?>@@ig
 
-FILTER: hyperLink_filterChina useless herf heyperlink China & japan Version
+FILTER: hyperLink_filterChina filter China Link
 
 s@<\s?a[^>]*(?:51vk\.com\
 |789hi\.com\
@@ -384,7 +384,7 @@ s@<\s?(?:script|iframe)[^>]*(?:60_\d?\.js\
 |zxxo\.net\
 |adult)[^>]*?>[\s\S]*?<\s?\/(?:script|iframe)\s?>@@ig
 
-FILTER: ScriptNiframeChina_filter useless herf heyperlink with script
+FILTER: ScriptNiframeChina_filter Filter china script & iframe
 
 s@<\s?(?:script|iframe)[^>]*(?:6park\
 |1133\.cc\
@@ -417,6 +417,8 @@ s@<\s?(?:script|iframe)[^>]*(?:6park\
 |comic-b\d\
 |cbox\.ws\
 |cpro\.baidu\.com\
+|csdnimg\.cn\
+|csdn\.net\
 |dhtmlwindow\.js\
 |firstpost\.js\
 |floatadv\.js\

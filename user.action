@@ -138,6 +138,7 @@ stupid-server.example.com/
 # as set in default.action anyway:
 #
 { +block{Nasty ads.} }
+cpro.baidu.com/cpro.*
 .5622.cn
 cp.dipan.com
 .*/hiido\.js
