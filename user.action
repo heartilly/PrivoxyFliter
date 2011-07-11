@@ -59,10 +59,6 @@
 fragile     = -block -crunch-all-cookies -filter -fast-redirects -hide-referer -prevent-compression
 shop        = -crunch-all-cookies allow-popups
 
-kill_alls	= +filter{img-reorder} +filter{herf_useless} +filter{Div_filter} +filter{Img_filter} +filter{hyperLink_filter} +filter{hyperLink_filterChina} +filter{hypperLinkImg_filter} +filter{hypperLinkImgbySize_filter} +filter{IframeWithWidth_filter} +filter{ScriptNiframe_filter} +filter{ScriptNiframeChina_filter} +filter{BlogWidget} +filter{object_filter} 
-
-allowce_alls	= -filter{img-reorder} -filter{herf_useless} -filter{Div_filter} -filter{Img_filter} -filter{hyperLink_filter} -filter{hyperLink_filterChina} -filter{hypperLinkImg_filter} -filter{hypperLinkImgbySize_filter} -filter{IframeWithWidth_filter} -filter{ScriptNiframe_filter} -filter{ScriptNiframeChina_filter} -filter{BlogWidget} -filter{object_filter} 
-
 # Your favourite blend of filters:
 #
 myfilters   = +filter{html-annoyances} +filter{js-annoyances} +filter{all-popups}\
@@ -71,19 +67,6 @@ myfilters   = +filter{html-annoyances} +filter{js-annoyances} +filter{all-popups
 # Allow ads for selected useful free sites:
 #
 allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
-{}
-{+filter{js-annoyances} \
- +filter{js-events} \
- +filter{content-cookies} \
- +filter{shockwave-flash} \
- +filter{google} \
- +filter{yahoo} \
- +filter{msn} \
- +filter{Event} \
- +filter{Script} \
-}
-.verycd.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.bonbonsex.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
 #... etc.  Customize to your heart's content.
 
 ## end aliases ########################################################
@@ -138,16 +121,6 @@ stupid-server.example.com/
 # as set in default.action anyway:
 #
 { +block{Nasty ads.} }
-cpro.baidu.com/cpro.*
-.5622.cn
-cp.dipan.com
-.*/hiido\.js
-.*.alimama.cn
-image.blog.livedoor.jp/fuckjp/imgs/c/c/cc7b6732.gif
-www.topblog.ws
-analytics-union.xunlei.com
-eiv.baidu.com/.*\.js
-toolbarqueries.google.com
 www.example.com/nasty-ads/sponsor.gif
 
 # The URLs of dynamically generated banners, especially from large banner
@@ -192,126 +165,5 @@ www.example.com/nasty-ads/sponsor.gif
 #
 { +set-image-blocker{blank} }
 #/
-{+filter{Event} \
- +filter{Script} \
-}
-.0ex.net*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.katube.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.ri007.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.ggse.info*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-388.tumblr.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.pchome.net
-www.linkbucks.com
-www.boryah.com
-xveedeo.blogspot.com
-.wikipedia.org
-xvediox.com*
-{+filter{Event} \
- +filter{Script} \
- +filter{shockwave-flash} \
-}
-.uwants.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-sexeden.blogspot.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.visionunion.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.kwongwah.com.my*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-.twclub.net*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-mvpict.blogbus.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-mvpic.blogbus.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-www.bbsmovie.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+filter{xvideo.cc} \
-}
-xvideo.cc*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-## set vi:nowrap tw=72
-{+filter{herf_useless} \
- +filter{img-reorder} \
- +filter{Div_filter} \
- +filter{Img_filter} \
- +filter{hyperLink_filter} \
- +filter{hyperLink_filterChina} \
- +filter{BlogWidget} \
- +filter{hypperLinkImg_filter} \
- +filter{hypperLinkImgbySize_filter} \
- +filter{IframeWithWidth_filter} \
- +filter{ScriptNiframe_filter} \
- +filter{ScriptNiframeChina_filter} \
- +filter{object_filter} \
-}
-.*/(?!.*(css|js|gif|jpe?g|png|ico)$)
 
-{+filter{unicode_Converter} \
- +filter{googleReaderAd} \
- +force-text-mode \
-}
- www.google.com/reader*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{-filter{img-reorder} \
-}
-*.google.com/*
-{+filter{customize1} \
- +filter{Event} \
- +filter{Script} \
- +filter{gogo2sex} \
-}
-gogo2sex.com
-{+filter{Event} \
- +filter{sinaBlog} \
-}
-blog.sina.com.cn
-{+filter{Script} \
- +filter{jysu} \
-}
-.jysu.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+filter{Event} \
- +filter{Script} \
- +filter{mtime} \
- +filter{shockwave-flash} \
-}
-{+filter{merderkaReview} \
- +filter{refresh-tags} \
-}
-merdekareview.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+filter{easy-share} \
-}
-.easy-share.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+filter{uwants} \
-}
-.uwants.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+filter{rephoto} \
-}
-.orig.jp*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{-block \
- -fast-redirects \
- -filter{herf_useless} \
- -filter{img-reorder} \
- -filter{Div_filter} \
- -filter{Img_filter} \
- -filter{hyperLink_filter} \
- -filter{hyperLink_filterChina} \
- -filter{BlogWidget} \
- -filter{hypperLinkImg_filter} \
- -filter{hypperLinkImgbySize_filter} \
- -filter{IframeWithWidth_filter} \
- -filter{ScriptNiframe_filter} \
- -filter{ScriptNiframeChina_filter} \
- -filter{object_filter} \
-}
-megaupload.com
-translate.google.com
-fbcdn.net
-twitter.com
-ticket.hypo.cc
-picasaweb.google.com
-spreadsheets.google.com
-www.facebook.com
-.flickr.
-adfuns.com
-i.mtime.cn
-./.*xml/*
-www.google.com/tbproxy*
-l.yimg.com
-{+filter{Script} \
-}
-redcrane186.blogspot.com*/(?!.*(css|js|gif|jpe?g|png|ico)$)
-{+hide-referrer{block} \
-}
-fap.to/.*\.jpg
-.turboimagehost.com/.*\.jpg
+## set vi:nowrap tw=72
